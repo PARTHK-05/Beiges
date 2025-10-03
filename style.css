@@ -1,0 +1,177 @@
+@font-face {
+    font-family: sweaters;
+    src: url('./kugile.regular.ttf');
+}
+
+@font-face {
+    font-family: brand;
+    src: url('./priestacy.regular.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+font-family: sweaters;
+background: linear-gradient(white,black);
+/* color: white; */
+
+}
+
+.nav{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    /* background-color: blue; */
+}
+
+.left-nav{
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 13px;
+    /* background-color: red; */
+    padding: 13px;
+}
+.nav h1{
+    font-size: 70px;
+    font-family: brand;
+    word-spacing: 2px;
+    font-weight: 700;
+}
+
+.right-nav{
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 13px;
+    padding: 13px;
+    /* background-color: red; */
+    
+
+}
+
+.brand-name{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    /* background-color: red; */
+    font-family: sweaters;
+
+}
+
+.brand-name h1{
+    padding: 5% 0px;
+    font-size: 300px;
+}
+
+.lest-page-bottom-section{
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    bottom: 15%;
+    left: 5%;
+    text-align: left;
+    /* background-color: blue; */
+    gap: 10px;
+}
+
+.lest-page-bottom-section h1{
+    font-size: 20px;
+    text-align: left;
+
+}
+
+.lest-page-bottom-section p{
+    font-size: 10px;
+    text-align: left;
+
+}
+
+.image1{
+    position: absolute;
+    top: 40%;
+    right: 15%;
+}
+.image1 img{
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    background-size: cover;
+    z-index: 3;
+
+ }
+
+ .image2{
+    position: absolute;
+    top: 55%;
+    left: 48%;
+}
+.image2 img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    background-size: cover;
+    z-index: 3;
+
+ }
+
+ .image3{
+    position: absolute;
+    bottom: 5%;
+    right: 27%;
+    background-position: center;
+
+}
+.image3 img{
+    width: 210px;
+    height: 200px;
+    object-fit: cover;
+    background-size: cover;
+    z-index: 2;
+ }
+
+ .footer{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5%;
+    font-size: 13px;
+    color: rgba(222, 215, 215, 0.474);
+    
+ }
+
+ .footer .shop{
+      /* text-decoration: underline; */
+  text-decoration-thickness: 2px; /* make line thicker */
+  text-underline-offset: 3px;  
+   text-decoration-skip-ink: none;
+    font-size: 10px;
+ 
+ }
+
+
