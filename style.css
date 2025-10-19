@@ -1,11 +1,11 @@
 @font-face {
-    font-family: sweaters;
-    src: url('./kugile.regular.ttf');
+  font-family: sweaters;
+  src: url('./kugile.regular.ttf');
 }
 
 @font-face {
-    font-family: brand;
-    src: url('./priestacy.regular.otf');
+  font-family: brand;
+  src: url('./priestacy.regular.otf');
 }
 
 * {
@@ -16,162 +16,275 @@
 
 html, body {
   width: 100%;
+  min-height: 100vh;
+  font-family: sweaters;
+  background: linear-gradient(white,rgb(25, 23, 23), black);
+}
+
+.main-page{
+  height: 100vh;
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.left-nav, .right-nav {
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 13px;
+  padding: 13px;
+}
+
+.nav h1 {
+  font-size: 70px;
+  font-family: brand;
+  word-spacing: 2px;
+  font-weight: 700;
+}
+
+.brand-name {
+  position: absolute;
+  width: 100%;
   height: 100%;
-font-family: sweaters;
-background: linear-gradient(white,black);
-/* color: white; */
-
+  top: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  font-family: sweaters;
 }
 
-.nav{
-    width: 100%;
-    height: 15%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    /* background-color: blue; */
+.brand-name h1 {
+  padding: 5% 0px;
+  font-size: 300px;
 }
 
-.left-nav{
-    width: 25%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 13px;
-    /* background-color: red; */
-    padding: 13px;
-}
-.nav h1{
-    font-size: 70px;
-    font-family: brand;
-    word-spacing: 2px;
-    font-weight: 700;
+.lest-page-bottom-section {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+  bottom: 15%;
+  left: 5%;
+  text-align: left;
+  gap: 10px;
 }
 
-.right-nav{
-    width: 25%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 13px;
-    padding: 13px;
-    /* background-color: red; */
-    
-
+.lest-page-bottom-section h1 {
+  font-size: 20px;
+  text-align: left;
 }
 
-.brand-name{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: top;
-    /* background-color: red; */
-    font-family: sweaters;
-
+.lest-page-bottom-section p {
+  font-size: 10px;
+  text-align: left;
 }
 
-.brand-name h1{
-    padding: 5% 0px;
-    font-size: 300px;
+.image1, .image2, .image3 {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.lest-page-bottom-section{
-    position: absolute;
-    width: 200px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: left;
-    bottom: 15%;
-    left: 5%;
-    text-align: left;
-    /* background-color: blue; */
-    gap: 10px;
+.image1 img,
+.image2 img,
+.image3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  transition: all ease .4s;
 }
 
-.lest-page-bottom-section h1{
-    font-size: 20px;
-    text-align: left;
-
+.image1 {
+  top: 40%;
+  right: 15%;
+  width: 250px;
+  height: 350px;
+  text-align: right;
 }
 
-.lest-page-bottom-section p{
-    font-size: 10px;
-    text-align: left;
-
+.image2 {
+  top: 55%;
+  left: 48%;
+  width: 200px;
+  height: 200px;
 }
 
-.image1{
-    position: absolute;
-    top: 40%;
-    right: 15%;
+.image3 {
+  bottom: 5%;
+  right: 27%;
+  width: 210px;
+  height: 200px;
 }
-.image1 img{
-    width: 250px;
-    height: 350px;
-    object-fit: cover;
-    background-size: cover;
-    z-index: 3;
 
- }
-
- .image2{
-    position: absolute;
-    top: 55%;
-    left: 48%;
+.image1 .details,
+.image2 .details,
+.image3 .details {
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background: linear-gradient(transparent, black);
+  border-radius: 10px;
+  bottom: -40%;
+  transition: all ease .6s;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
 }
-.image2 img{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    background-size: cover;
-    z-index: 3;
 
- }
 
- .image3{
-    position: absolute;
-    bottom: 5%;
-    right: 27%;
-    background-position: center;
-
+.image1:hover .details {
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  transform: translateY(-10px);
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
 }
-.image3 img{
-    width: 210px;
-    height: 200px;
-    object-fit: cover;
-    background-size: cover;
-    z-index: 2;
- }
 
- .footer{
-    position: absolute;
-    width: 100%;
-    height: 10%;
-    bottom: 0;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-between;
-    align-items: center;
-    padding: 2px 5%;
-    font-size: 13px;
-    color: rgba(222, 215, 215, 0.474);
-    
- }
 
- .footer .shop{
-      /* text-decoration: underline; */
-  text-decoration-thickness: 2px; /* make line thicker */
-  text-underline-offset: 3px;  
-   text-decoration-skip-ink: none;
-    font-size: 10px;
- 
- }
+.image2:hover .details,
+.image3:hover .details {
+  bottom: 0;
+  opacity: 1;
+}
+
+.image1:hover img,
+.image2:hover img,
+.image3:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+.grid-section{
+  width: 100%;
+  height: 100vh;
+  /* background: linear-gradient(135deg, white, #000); */
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "top-left top-up top"
+    "top-left top-down right-bottom"
+    "left-bottom left-bottom right-bottom";
+  gap: 15px;
+  padding: 15px;
+}
+
+.grid-section > div {
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  filter: brightness(45%);
+}
+
+.grid-section > div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(transparent, rgba(0, 0, 0, 0.6)); */
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.grid-section > div:hover {
+  transform: scale(1.04);
+  filter: brightness(100%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.grid-section > div:hover::after {
+  opacity: 1;
+}
+
+
+.grid-section > div h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 22px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.grid-section > div:hover h2 {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+/* Specific grid areas with fashion images */
+.top-left {
+  grid-area: top-left;
+  background-image: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=800');
+}
+
+.top-up {
+  grid-area: top-up;
+  background-image: url('https://images.unsplash.com/photo-1722029117947-0243547785e1?auto=format&fit=crop&q=80&w=800');
+}
+
+.top-down {
+  grid-area: top-down;
+  background-image: url('https://plus.unsplash.com/premium_photo-1673125287442-dd64fd734e29?auto=format&fit=crop&q=80&w=800');
+}
+
+.top {
+  grid-area: top;
+  background-image: url('https://images.unsplash.com/photo-1654074175953-280d98ab9984?auto=format&fit=crop&q=80&w=800');
+}
+
+.left-bottom {
+  grid-area: left-bottom;
+  background-image: url('https://images.unsplash.com/photo-1589363461851-d513439efb33?auto=format&fit=crop&q=80&w=800');
+}
+
+.right-bottom {
+  grid-area: right-bottom;
+  background-image: url('https://images.unsplash.com/photo-1692178573046-5bec6b641032?auto=format&fit=crop&q=80&w=800');
+}
+
+
+
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 5%;
+  font-size: 13px;
+  color: rgba(222, 215, 215, 0.474);
+}
+
+.footer .shop {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: none;
+  font-size: 10px;
+}
 
 
